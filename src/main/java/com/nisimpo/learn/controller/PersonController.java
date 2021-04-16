@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -20,8 +19,6 @@ public class PersonController {
 
     @GetMapping("/")
     public String index(Model model){
-        /*ModelAndView mv = new ModelAndView("index.html");
-        mv.addObject("persons",personRepo.findAll()) ;*/
         List<Person> persons = (List<Person>) personRepo.findAll();
         model.addAttribute("persons",persons);
         return "index";
@@ -41,7 +38,6 @@ public class PersonController {
 
     @GetMapping("home")
     public String goHome(Model model){
-        //Model model = new Model();
         List<Person> persons = (List<Person>) personRepo.findAll();
         model.addAttribute("persons",persons);
         return "index";
