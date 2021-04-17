@@ -33,13 +33,15 @@ public class PersonController {
     @PostMapping("person/save")
     public String savePerson(Person person,Model model){
         personRepo.save(person);
-        return this.goHome(model);
-    }
-
-    @GetMapping("home")
-    public String goHome(Model model){
         List<Person> persons = (List<Person>) personRepo.findAll();
         model.addAttribute("persons",persons);
         return "index";
     }
+
+    /*@GetMapping("home")
+    public String goHome(Model model){
+        List<Person> persons = (List<Person>) personRepo.findAll();
+        model.addAttribute("persons",persons);
+        return "index";
+    }*/
 }

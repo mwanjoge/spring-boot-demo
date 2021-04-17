@@ -1,11 +1,13 @@
-package com.nisimpo.learn.models;
+package com.nisimpo .learn.models;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Person {
     @Id
+    @GeneratedValue
     private int pid;
     private byte age;
     private String name;

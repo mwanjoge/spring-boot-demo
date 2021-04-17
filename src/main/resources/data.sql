@@ -1,4 +1,4 @@
-insert into person values ('1',36,'Chacha')
-insert into person values ('2',32,'Boss')
-insert into person values ('3',36,'Kude')
-insert into person values ('4',38,'Lari')
+/*insert into person values ('11',36,'Chacha')
+insert into person values ('12',32,'Boss')
+insert into person values ('13',36,'Kude')
+insert into person values ('14',38,'Lari')*/
